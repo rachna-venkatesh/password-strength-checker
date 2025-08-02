@@ -1,0 +1,146 @@
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #00ffcc;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 16px;
+}
+
+.navbar a, .navbar span {
+  color: #00ffcc;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+h1 {
+  text-align: center;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 25px;
+}
+
+
+input[type="password"],
+input[type="text"],
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background: #111;
+  color: #00ffcc;
+  font-size: 16px;
+  box-shadow: 0 0 10px #00ffcc inset;
+}
+
+button, input[type="submit"] {
+  background: #00ffcc;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #00ffaa;
+}
+
+.strength-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#strength-bar {
+  height: 100%;
+  width: 0%;
+  background: red;
+  transition: width 0.5s ease;
+}
+
+#suggestions-list {
+  list-style-type: square;
+  color: #00ffcc;
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+#suggestions-list li {
+  margin-bottom: 5px;
+}
+
+.warning {
+  color: #ff5050;
+  font-weight: bold;
+  text-shadow: 0 0 5px red;
+  margin-top: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container, .navbar {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px; 
+  box-sizing: border-box
+  line-height: 1;
+}
